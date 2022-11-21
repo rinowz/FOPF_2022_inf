@@ -24,6 +24,8 @@ Espeedy=[]
 scope=0
 t=5
 
+tras = 0
+
 
 def render(x, y, r, color):
     for i in range(len(x)):
