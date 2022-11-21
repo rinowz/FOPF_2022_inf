@@ -9,6 +9,7 @@ screen = pygame.display.set_mode((a, b))
 
 font = pygame.font.Font("C:/Users/mezhnov.ae/Desktop/proga/Git/FOPF_2022_inf/lab8/ttf.ttf", 20)
 
+
 RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
@@ -77,6 +78,11 @@ pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
 
+#pygame.mixer.init()
+pygame.mixer.music.load("uno.mp3")
+pygame.mixer.music.play(-1)
+#pygame.event.wait()
+
 wait_time = 1
 frame_counter = 0
 while not finished:
@@ -90,6 +96,7 @@ while not finished:
     render(Ex, Ey, Er, col)
     move(t, Espeedx, Espeedy, Ex, Ey, Er, a, b)
     text = font.render("Score: " + str(scope), True, RED)
+    
 
     # Вывести сделанную картинку на экран в точке (250, 250)
     screen.blit(text, [1, 1])
